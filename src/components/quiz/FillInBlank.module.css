@@ -1,0 +1,103 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.codeBlock {
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.blankWrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  vertical-align: middle;
+}
+
+.blankInput {
+  background-color: var(--color-surface-light);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  min-width: 150px;
+}
+
+.blankInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.blankInput::placeholder {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.correctInput {
+  border-color: var(--color-success);
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.incorrectInput {
+  border-color: var(--color-error);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.correctAnswer {
+  font-size: 0.75rem;
+  color: var(--color-success);
+  margin-top: 0.25rem;
+}
+
+.feedback {
+  margin-bottom: 1.5rem;
+}
+
+.successCard {
+  border-color: var(--color-success);
+}
+
+.errorCard {
+  border-color: var(--color-error);
+}
+
+.feedbackTitle {
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.successCard .feedbackTitle {
+  color: var(--color-success);
+}
+
+.errorCard .feedbackTitle {
+  color: var(--color-error);
+}
+
+.explanation {
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
