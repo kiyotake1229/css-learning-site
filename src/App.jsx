@@ -7,7 +7,7 @@ import CheatSheet from './pages/CheatSheet'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Navbar />
       <main>
         <Routes>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+    // GitHub Pages SPA redirect
+    var base = '/css-learning-site'
+    var path = location.pathname.replace(base, '') || '/'
+    var search = location.search
+    var hash = location.hash
+    sessionStorage.setItem('redirect', path + search + hash)
+    location.replace(base + '/')
+  </script>
+</head>
+<body></body>
+</html>
