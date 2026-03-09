@@ -1,0 +1,206 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: 480px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #1e293b;
+}
+
+.tabs {
+  display: flex;
+  background: #0f172a;
+  padding: 4px 8px 0;
+  gap: 2px;
+}
+
+.tab {
+  padding: 6px 16px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.tab:hover {
+  color: #e2e8f0;
+}
+
+.tabActive {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.editorArea {
+  flex: 1;
+  overflow: hidden;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  background: #1e293b;
+  color: #e2e8f0;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 14px 16px;
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  tab-size: 2;
+}
+
+.compiling {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  padding: 4px 10px;
+  align-self: center;
+}
+
+.errorBox {
+  background: #450a0a;
+  color: #fca5a5;
+  font-size: 0.78rem;
+  padding: 8px 14px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.resetBtn {
+  background: #334155;
+  color: #94a3b8;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-align: right;
+}
+
+.resetBtn:hover {
+  background: #475569;
+  color: #e2e8f0;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.previewLabel {
+  background: #f1f5f9;
+  border-bottom: 1px solid var(--border);
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scssTag {
+  font-size: 0.7rem;
+  background: #cf649a;
+  color: white;
+  padding: 1px 7px;
+  border-radius: 99px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+
+.iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: white;
+}
+
+/* ===== スプリットモード ===== */
+.splitBtn {
+  margin-left: auto;
+  background: #334155;
+  color: #94a3b8;
+  border: none;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.splitBtn:hover {
+  background: #475569;
+  color: #e2e8f0;
+}
+
+.splitBtnActive {
+  background: #2563eb;
+  color: white;
+}
+
+.splitBtnActive:hover {
+  background: #1d4ed8;
+  color: white;
+}
+
+.editorSplit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.splitPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-top: 1px solid #0f172a;
+}
+
+.splitLabel {
+  background: #0f172a;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.containerSplit .editor {
+  /* スプリット時も高さを維持 */
+}

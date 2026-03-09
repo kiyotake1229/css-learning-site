@@ -1,0 +1,87 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+.hero {
+  text-align: center;
+  padding: 56px 0 40px;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.content {
+  padding-top: 8px;
+}
+
+.filterBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 7px 18px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.filterBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filterActive {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.filterActive:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
+/* SCSSフィルターボタン専用 */
+.filterBtn[data-filter="scss"] {
+  border-color: #cf649a;
+  color: #cf649a;
+}
+
+.filterBtn[data-filter="scss"].filterActive {
+  background: #cf649a;
+  border-color: #cf649a;
+  color: white;
+}
+
+.filterBtn[data-filter="scss"].filterActive:hover {
+  background: #b5547f;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
